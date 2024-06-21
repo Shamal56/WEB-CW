@@ -1,0 +1,62 @@
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+.splash img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content {
+    position: relative;
+}
+@keyframes fadeIn {
+    to{
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+.mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    margin-top: 20px;
+}
+.mission h1 {
+    font-family: Cambria;
+    font-size: 85px;
+    font-weight: 700;
+}
+.mission p {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+.Names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Names ul {
+    list-style: square;
+    padding: 0%;
+    margin: 0%;
+}
+.Names li { 
+    align-items: center;
+    font-size: 45px;
+    font-family: Helvetica;
+    font-weight: 500;
+    margin: 3px;
+}
