@@ -137,17 +137,16 @@ body.showbar .container {
 }
 .sidelistbar .listcart .items {
     display: grid;
-    grid-template-columns: 70px 140px 100px 1fr;
+    grid-template-columns: 70px 100px 100px 1fr;
+    border-top: 1px solid rgba(255, 255, 255, 0.185);
+    margin-top: 0;
     text-align: center;
     align-items: center;
 }
 .sidelistbar .quantity span {
-    display: inline-block;
-    width: 17px;
+    width: 25px;
     height: 17px;
-    background-color: aliceblue;
-    color: black;
-    border-radius: 50%;
+    color: white;
     cursor: pointer;
 }
 .sidelistbar .quantity span:nth-child(2) {
