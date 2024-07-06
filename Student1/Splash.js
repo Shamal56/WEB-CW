@@ -1,5 +1,5 @@
 function Home() {
-    window.location.href = "https://shamal56.github.io/MyProfile.shamal.io/"
+    window.location.href = "Shop.html"
 }
 
 setTimeout(Home, 4000);
