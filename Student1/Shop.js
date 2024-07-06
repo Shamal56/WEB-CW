@@ -44,11 +44,13 @@ const AddtoCart = (product_id) => {
 }
 
 const AddTOHTML = () => {
+    let TotalQuantity = 0;
     ListCart.innerHTML = '';
     if (CartItem.length > 0) {
 
         CartItem.forEach(item => {
 
+            TotalQuantity = TotalQuantity + item.quantity;
 
             const ProductElement = document.querySelector(`.product[id="${item.product_id}"]`);
             const ProductImage = ProductElement.querySelector('img').src;
@@ -79,4 +81,5 @@ const AddTOHTML = () => {
         ListCart.appendChild(NewCart);    
         })
     }
+    CartSpan.innerText = TotalQuantity;
 }
