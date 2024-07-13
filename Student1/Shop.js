@@ -1,10 +1,11 @@
 let Cart = document.querySelector('.cart');
 let Close = document.querySelector('.close');
 let Body = document.querySelector('body');
-let ProductList = document.querySelector('.productlist');
-let ProductList2 = document.querySelector('.productlist1')
+let ProductList = document.querySelector('.productlist1');
+let ProductList2 = document.querySelector('.productlist2')
 let ListCart = document.querySelector('.listcart');
 let CartSpan = document.querySelector('.cart span');
+let Remove = document.querySelector('.items');
 
 let CartItem =[];
 
@@ -31,6 +32,14 @@ ProductList2.addEventListener('click', (event) => {
         let product = click.closest('.product');
         let product_id = product.id;
         AddtoCart(product_id);
+    }
+})
+
+Remove.addEventListener('click', (event) => {
+    let click = event.target;
+    if (click.classList.contains('remove')){
+        let product = click.closest('.product');
+        let product_id = null;
     }
 })
 
@@ -71,24 +80,46 @@ const AddTOHTML = () => {
 
             let NewCart = document.createElement('div');
             NewCart.classList.add('items');
+            NewCart.dataset.id = item.product_id;
             NewCart.innerHTML = `
             <div class="image">
-                    <img src="${ProductImage}" alt="">
-                </div>
-                <div class="name">
-                    ${ProductName}
-                </div>
-                <div class="total">
-                    $${totalPrice}
-                </div>
-                <div class="quantity">
+                <img src="${ProductImage}" alt="">
+            </div>
+            <div class="name">
+                ${ProductName}
+            </div>
+            <div class="total">
+                $${totalPrice}
+            </div>
+            <div class="quantity">
                     
-                    <span>Quantity : ${item.quantity}</span>
+                <span>Quantity : ${item.quantity}</span>
                     
-                </div>
+            </div>
+            <div class="remove">
+                <img class="Delete" src="Shop/Trash.png">
+            </div>
             `;
         ListCart.appendChild(NewCart);    
         })
     }
     CartSpan.innerText = TotalQuantity;
+}
+
+ListCart.addEventListener('click', (event) => {
+    let ClickPosition = event.target;
+    if (ClickPosition.classList.contains('Delete')) {
+        let product_id = ClickPosition.parentElement.parentElement.dataset.id;
+        console.log(product_id);
+        DeleteProduct(product_id);
+    }
+    
+})
+
+const DeleteProduct = (product_id) => {
+    let ItemIndex = CartItem.findIndex((item) => item.product_id === product_id);
+    if (ItemIndex !== -1) {
+        CartItem.splice(ItemIndex, 1);
+        AddTOHTML(); 
+    }
 }
