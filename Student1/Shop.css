@@ -170,6 +170,34 @@ header .cart span {
     width: 100%;
     filter: drop-shadow(0 20px 30px black);
 }
+.productlist2 .product img#Portable1 {
+    width: 120px;
+    height: 250px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    filter: drop-shadow(0 20px 30px black);
+}
+.productlist2 .product img#Gravity {
+    width: 100%;
+    height: 290px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 20px 30px black);
+}
+.productlist2 .product img#BottleFil {
+    width: 90%;
+    height: 250px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    filter: drop-shadow(0 20px 30px black);
+}
+.productlist2 .product img#Tablets {
+    width: 80%;
+    height: 210px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    filter: drop-shadow(0 20px 30px black);
+}
 .productlist2 {
     display: grid;
     grid-template-columns: repeat(4, 250px);
@@ -230,6 +258,103 @@ header .cart span {
 .productlist2 .addtocart :hover {
     padding: 10px;
 }
+
+/*Product list row 3*/
+.productlist3 .product img {
+    width: 100%;
+    filter: drop-shadow(0 20px 30px black);
+}
+.productlist3 .product img#Umem {
+    width: 230px;
+    height: 255px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 20px 30px black);
+}
+.productlist3 .product img#ROin {
+    width: 280px;
+    height: 255px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 0px;
+    margin-left: -12px;
+    filter: drop-shadow(0 20px 30px black);
+}
+.productlist3 .product img#ROcont {
+    width: 280px;
+    height: 255px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: -10px;
+    filter: drop-shadow(0 20px 30px black);
+}
+.productlist3 .product img#SOftner {
+    width: 80%;
+    height: 255px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 20px 30px black);
+}
+.productlist3 {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.productlist3 .product {
+    background-color: #a7edffa2;
+    padding: 0;
+    border-radius: 10px;
+    width: 250px;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.404));
+    margin-left: 110px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+.productlist3 .box {
+    background-color: #4b96a8;
+    width: 250px;
+    border-radius: 0 0 10px 10px;
+}
+.productlist3  h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+}
+.productlist3 .price {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+.productlist3 button {
+    font-family: "Montserrat", sans-serif;
+    background-color: #344c57;
+    color: white;
+    padding: 8px 12px;
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.productlist3 button:hover {
+    background-color: #5bb1eb;
+    color: #1c2b31;
+    font-weight: 700;
+    padding: 8px 13px;
+    border-radius: 20px;
+}
+.productlist3 .addtocart :hover {
+    padding: 10px;
+}
 .middlecontent {
     justify-content: center;
     align-items: center;
@@ -238,8 +363,23 @@ header .cart span {
     padding: 0;
 }
 .middlecontent .midimg img{
-    width: 900px;
+    width: 1100px;
     height: 260px;
+    filter: drop-shadow(1px 1px 5px rgba(9, 45, 122, 0.288));
+}
+.middlecontent2 {
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+}
+.middlecontent2 .midimg2 img{
+    width: fit-content;
+    height: 260px;
+    padding-left: 70px;
+    margin-top: 0;
+    margin-bottom: 0;
     filter: drop-shadow(1px 1px 5px rgba(9, 45, 122, 0.288));
 }
 .sidelistbar {
@@ -278,7 +418,7 @@ body.showbar .container {
     border: 2px solid white;
     color: white;
     border-radius: 16px;
-    margin: -20px 8px 8px 8px;
+    margin: 8px 8px 8px 8px;
     padding: 15px;
 }
 .sidelistbar .button button:hover {
@@ -291,11 +431,12 @@ body.showbar .container {
 }
 
 .sidelistbar .listcart .items img {
-    width: 100%;
+    width: fit-content;
+    height: 80px;
 }
 .sidelistbar .listcart .items {
     display: grid;
-    grid-template-columns: 70px 80px 80px 100px 1fr;
+    grid-template-columns: 90px 100px 50px 100px 1fr;
     border-top: 1px solid rgba(255, 255, 255, 0.185);
     margin-top: 0;
     text-align: center;
@@ -326,4 +467,7 @@ body.showbar .container {
     padding: 3px;
     width: 28px;
     height: fit-content;
+}
+.listcart {
+    overflow: auto;
 }

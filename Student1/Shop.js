@@ -1,8 +1,9 @@
 let Cart = document.querySelector('.cart');
 let Close = document.querySelector('.close');
 let Body = document.querySelector('body');
-let ProductList = document.querySelector('.productlist1');
-let ProductList2 = document.querySelector('.productlist2')
+let ProductList1 = document.querySelector('.productlist1');
+let ProductList2 = document.querySelector('.productlist2');
+let ProductList3 = document.querySelector('.productlist3');
 let ListCart = document.querySelector('.listcart');
 let CartSpan = document.querySelector('.cart span');
 let Remove = document.querySelector('.items');
@@ -18,7 +19,7 @@ Close.addEventListener('click', () => {
 })
 
 //eventlistner for add to cart button
-ProductList.addEventListener('click', (event) => {
+ProductList1.addEventListener('click', (event) => {
     let click = event.target;
     if (click.classList.contains('addtocart')){
         let product = click.closest('.product');
@@ -27,6 +28,15 @@ ProductList.addEventListener('click', (event) => {
     }
 })
 ProductList2.addEventListener('click', (event) => {
+    let click = event.target;
+    if (click.classList.contains('addtocart')){
+        let product = click.closest('.product');
+        let product_id = product.id;
+        AddtoCart(product_id);
+    }
+})
+
+ProductList3.addEventListener('click', (event) => {
     let click = event.target;
     if (click.classList.contains('addtocart')){
         let product = click.closest('.product');
