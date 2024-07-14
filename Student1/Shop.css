@@ -471,3 +471,104 @@ body.showbar .container {
 .listcart {
     overflow: auto;
 }
+.Appear {
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    padding: 20px;
+    background-color: rgba(133, 214, 219, 0.932);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    animation: fadein 0.6s;
+    height: 600px;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+}
+@keyframes fadein {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+.FormLayout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.hidden {
+    display: none;
+}
+form input{
+    font-size: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 7px;
+}
+form input[type="text"] {
+    width: 445px;
+}
+.FormHeading {
+    font-size: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+form label {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+.FormButton input[type="reset"], .FormButton input[type="submit"] {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-left: 20%;
+    font-weight: 500;
+}
+.FormButton input[type="reset"] {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.FormButton input[type="reset"]:hover {
+    background-color: #83effd;
+    border-radius: 15px;
+}
+
+.FormButton input[type="submit"]:hover {
+    background-color: #83effd;
+    border-radius: 15px;
+}
+.Appear img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    left: 450px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 2px;
+}
+.Appear img:hover {
+    background-color: wheat;
+    padding: 1px;
+    width: 30px;
+    height: 30px;
+    border: 3px;
+}
+.userInput .error {
+    height: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: red;
+    margin-top: 5px;
+}

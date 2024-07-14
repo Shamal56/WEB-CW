@@ -133,3 +133,94 @@ const DeleteProduct = (product_id) => {
         AddTOHTML(); 
     }
 }
+
+//Checkout Form popup
+document.addEventListener("DOMContentLoaded", function() {
+    const checkoutButton = document.querySelector('.Checkout');
+    const checkoutFormContainer = document.getElementById('checkoutForm');
+    const CloseButton = document.querySelector('.Cross');
+
+
+    checkoutButton.addEventListener('click', function() {
+        if (CartItem.length == 0) {
+            alert("Cart is Empty!!")
+        } else {
+            checkoutFormContainer.classList.toggle('hidden');
+        }
+        
+    });
+    CloseButton.addEventListener('click', function() {
+        checkoutFormContainer.classList.toggle('hidden');
+    })
+});
+
+//Form validation
+const Name = document.getElementById('name');
+const Email = document.getElementById('email');
+const shipAddress = document.getElementById('address');
+const Tel = document.getElementById('number');
+const Form = document.getElementById('FormLayout');
+
+
+Form.addEventListener('submit', (e) => {  
+    let Allvalid = validateInputs();
+
+    if (!Allvalid) {
+        e.preventDefault();
+    }
+});
+
+const ErrorMessage = (element, message) => {
+    const UserInputs = element.parentElement;
+    const DisplayError = UserInputs.querySelector('.error');
+
+    DisplayError.innerHTML = message;
+    console.log("Error message:", message);
+    console.log("DisplayError:", DisplayError);
+};
+
+const Validated = element => {
+    const UserInputs = element.parentElement;
+    const DisplayError = UserInputs.querySelector('.error');
+
+    DisplayError.innerHTML = "";
+};
+
+const validateInputs = () => {
+    const NameValue = Name.value.trim();
+    const EmailValue = Email.value.trim();
+    const AddressValue = shipAddress.value.trim();
+    const NumberValue = Tel.value.trim();
+
+    if (NameValue === '') {
+        ErrorMessage(Name, "Name is required!!!");
+    } else if (!/^[a-zA-Z\s]+$/.test(NameValue)) {
+        ErrorMessage(Name, "Enter valid name with Only letters!!");
+    } else {
+        Validated(Name);
+    }
+
+    if (EmailValue === '') {
+        ErrorMessage(Email, "Email is required!!!");
+    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(EmailValue)) {
+        ErrorMessage(Email, "Invalid email address!!!");
+    } else {
+        Validated(Email);
+    }
+
+    if (AddressValue === '') {
+        ErrorMessage(shipAddress, "Address is required!!!"); 
+    } else {
+        Validated(shipAddress);
+    }
+
+    if (NumberValue === '') {
+        ErrorMessage(Tel, "Contact is required!!!");
+    } else if (!/^\d*$/.test(NumberValue)) {
+        ErrorMessage(Tel, "Invalid Number!!!");
+    } else if (!NumberValue.length == 10) {
+        ErrorMessage(Tel, "Number has to be less than 11 and greater than 1!!");
+    } else {
+        Validated(Tel);
+    }
+};
