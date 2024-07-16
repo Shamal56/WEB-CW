@@ -4,6 +4,7 @@
 body {
     min-width: fit-content;
 }
+/*container*/
 .splash {
     position: fixed;
     top: 0;
@@ -13,6 +14,7 @@ body {
     overflow: hidden;
     z-index: -1;
 }
+/*splash image*/
 .splash img {
     top: 0;
     left: 0;
@@ -20,8 +22,20 @@ body {
     height: 100%;
     object-fit: fill;
 }
+/*content stlyng*/
 .content {
     position: relative;
+}
+/*fade animation for the image*/
+@keyframes fadeIn {
+    to{
+        opacity: 1;
+    }
+}
+
+#fade-in1 {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
 }
 @keyframes fadeIn {
     to{
@@ -29,7 +43,7 @@ body {
     }
 }
 
-#fade-in {
+#fade-in2 {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
 }
@@ -61,6 +75,7 @@ body {
     text-align: center;
     color: white;
 }
+/*list styling*/
 .Names {
     margin-top: 30px;
     display: flex;
@@ -68,7 +83,6 @@ body {
     align-items: center;
 }
 .Names ul {
-    list-style: square;
     padding: 0%;
     margin: 0%;
 }
