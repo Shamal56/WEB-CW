@@ -8,6 +8,7 @@ let ListCart = document.querySelector('.listcart');
 let CartSpan = document.querySelector('.cart span');
 let Remove = document.querySelector('.items');
 
+
 let CartItem =[];
 
 //for opening and closing of the sidebar
@@ -27,6 +28,7 @@ ProductList1.addEventListener('click', (event) => {
         AddtoCart(product_id);
     }
 })
+//eventlistner for add to cart button
 ProductList2.addEventListener('click', (event) => {
     let click = event.target;
     if (click.classList.contains('addtocart')){
@@ -35,7 +37,7 @@ ProductList2.addEventListener('click', (event) => {
         AddtoCart(product_id);
     }
 })
-
+//eventlistner for add to cart button
 ProductList3.addEventListener('click', (event) => {
     let click = event.target;
     if (click.classList.contains('addtocart')){
@@ -45,14 +47,7 @@ ProductList3.addEventListener('click', (event) => {
     }
 })
 
-Remove.addEventListener('click', (event) => {
-    let click = event.target;
-    if (click.classList.contains('remove')){
-        let product = click.closest('.product');
-        let product_id = null;
-    }
-})
-
+//method to find the product details using the id 
 const AddtoCart = (product_id) => {
     let ProductIndex = CartItem.findIndex((value) => value.product_id == product_id);
     if (CartItem.length <= 0) {
@@ -71,8 +66,11 @@ const AddtoCart = (product_id) => {
     AddTOHTML();
 }
 
+//method for add the data to the side bar
 const AddTOHTML = () => {
     let TotalQuantity = 0;
+    let Totalprice = 0;
+    const TotalPriceElement = document.querySelector('.TotalBar');
     ListCart.innerHTML = '';
     if (CartItem.length > 0) {
 
@@ -87,6 +85,7 @@ const AddTOHTML = () => {
 
             const priceNumber = ProductPrice.replace('$', '');
             const totalPrice = priceNumber * item.quantity;
+            Totalprice = Totalprice + totalPrice;
 
             let NewCart = document.createElement('div');
             NewCart.classList.add('items');
@@ -110,12 +109,19 @@ const AddTOHTML = () => {
                 <img class="Delete" src="Shop/Trash.png">
             </div>
             `;
-        ListCart.appendChild(NewCart);    
+        ListCart.appendChild(NewCart);  
+        CartSpan.innerText = TotalQuantity;  
         })
+        TotalPriceElement.classList.add('TotalPrice');
+        TotalPriceElement.innerHTML = `Total : $${Totalprice.toFixed(2)}`;
+
+    } else {
+        TotalPriceElement.innerHTML = 'Total : $0.00';
     }
+
     CartSpan.innerText = TotalQuantity;
 }
-
+//eventlistner for delete the cart item using the delte icon
 ListCart.addEventListener('click', (event) => {
     let ClickPosition = event.target;
     if (ClickPosition.classList.contains('Delete')) {
@@ -125,7 +131,6 @@ ListCart.addEventListener('click', (event) => {
     }
     
 })
-
 const DeleteProduct = (product_id) => {
     let ItemIndex = CartItem.findIndex((item) => item.product_id === product_id);
     if (ItemIndex !== -1) {
@@ -192,35 +197,46 @@ const validateInputs = () => {
     const AddressValue = shipAddress.value.trim();
     const NumberValue = Tel.value.trim();
 
+    let Valid = true;
+
     if (NameValue === '') {
         ErrorMessage(Name, "Name is required!!!");
+        Valid = false;
     } else if (!/^[a-zA-Z\s]+$/.test(NameValue)) {
         ErrorMessage(Name, "Enter valid name with Only letters!!");
+        Valid = false;
     } else {
         Validated(Name);
     }
 
     if (EmailValue === '') {
         ErrorMessage(Email, "Email is required!!!");
+        Valid = false;
     } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(EmailValue)) {
         ErrorMessage(Email, "Invalid email address!!!");
+        Valid = false;
     } else {
         Validated(Email);
     }
 
     if (AddressValue === '') {
         ErrorMessage(shipAddress, "Address is required!!!"); 
+        Valid = false;
     } else {
         Validated(shipAddress);
     }
 
     if (NumberValue === '') {
         ErrorMessage(Tel, "Contact is required!!!");
+        Valid = false;
     } else if (!/^\d*$/.test(NumberValue)) {
         ErrorMessage(Tel, "Invalid Number!!!");
-    } else if (!NumberValue.length == 10) {
+        Valid = false;
+    } else if (NumberValue.length !== 10) {
         ErrorMessage(Tel, "Number has to be less than 11 and greater than 1!!");
+        Valid = false;
     } else {
         Validated(Tel);
     }
+    return Valid;
 };

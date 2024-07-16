@@ -9,7 +9,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-/**/
+/*product category headings*/
 .title1 {
     margin-left: 100px;
     font-size: 55px;
@@ -19,7 +19,6 @@ body {
     color: #344c57;
     margin-top: 20px;
 }
-
 .title2 {
     text-align: left;
     margin-left: 100px;
@@ -30,7 +29,7 @@ body {
     color: #344c57;
     margin-top: 20px;
 }
-
+/*Main container*/
 .Container {
     width: 1300px;
     background-color: rgb(255, 255, 255);
@@ -42,7 +41,7 @@ body {
     border-radius: 10px; 
     filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.13));
 }
-
+/*cart icon*/
 svg {
     margin-right: 100px;
     width: 70px;
@@ -59,10 +58,11 @@ header .cart {
     position: relative;
     cursor: pointer;
 }
+/*cart item quantity*/
 header .cart span {
     display: flex;
-    width: 27px;
-    height: 27px;
+    width: 26px;
+    height: 26px;
     background-color: #289cd2;
     justify-content: center;
     align-items: center;
@@ -120,7 +120,7 @@ header .cart span {
     border-radius: 10px;
     width: 250px;
     object-fit: fill;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.404));
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.404));
     margin-left: 110px;
     margin-bottom: 30px;
 }
@@ -213,7 +213,7 @@ header .cart span {
     padding: 0;
     border-radius: 10px;
     width: 250px;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.404));
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.404));
     margin-left: 110px;
     margin-bottom: 30px;
     margin-top: 40px;
@@ -310,7 +310,7 @@ header .cart span {
     padding: 0;
     border-radius: 10px;
     width: 250px;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.404));
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.404));
     margin-left: 110px;
     margin-bottom: 30px;
     margin-top: 40px;
@@ -355,6 +355,7 @@ header .cart span {
 .productlist3 .addtocart :hover {
     padding: 10px;
 }
+/*middle image bar*/
 .middlecontent {
     justify-content: center;
     align-items: center;
@@ -367,6 +368,7 @@ header .cart span {
     height: 260px;
     filter: drop-shadow(1px 1px 5px rgba(9, 45, 122, 0.288));
 }
+/*middle image bar 2*/
 .middlecontent2 {
     height: fit-content;
     justify-content: center;
@@ -377,11 +379,11 @@ header .cart span {
 .middlecontent2 .midimg2 img{
     width: fit-content;
     height: 260px;
-    padding-left: 70px;
-    margin-top: 0;
+    margin-top: -20px;
     margin-bottom: 0;
     filter: drop-shadow(1px 1px 5px rgba(9, 45, 122, 0.288));
 }
+/*side bar styling*/
 .sidelistbar {
     width: 400px;
     background: linear-gradient(to bottom right, #344c57, #2c3e50);
@@ -436,7 +438,7 @@ body.showbar .container {
 }
 .sidelistbar .listcart .items {
     display: grid;
-    grid-template-columns: 90px 100px 50px 100px 1fr;
+    grid-template-columns: 90px 90px 50px 110px 1fr;
     border-top: 1px solid rgba(255, 255, 255, 0.185);
     margin-top: 0;
     text-align: center;
@@ -446,7 +448,6 @@ body.showbar .container {
     width: 25px;
     height: 17px;
     color: white;
-    cursor: pointer;
 }
 .sidelistbar .quantity span:nth-child(2) {
     background-color: transparent;
@@ -468,9 +469,20 @@ body.showbar .container {
     width: 28px;
     height: fit-content;
 }
+.TotalBar {
+    height: 20px;
+    padding-top: 22px;
+    padding-bottom:10px;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
 .listcart {
     overflow: auto;
 }
+
+/*Form styling*/
 .Appear {
     position: fixed;
     flex-direction: column;
@@ -490,6 +502,7 @@ body.showbar .container {
     box-sizing: border-box;
     transform: translate(-50%, -50%);
 }
+/*form appear animation*/
 @keyframes fadein {
     from { opacity: 0;}
     to { opacity: 1;}
