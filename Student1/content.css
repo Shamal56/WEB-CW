@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+.MainImg {
+    position: relative;
+    background-color: white;
+    width: 1920px;
+    min-width: 1200px;
+    height: 500px;
+    min-height: auto;
+}
+.Image_main {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+}
+.MainImg .heading {
+    position: absolute;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 70px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: rgb(53, 94, 129);
+    top: 10%;
+    left: 5%;
+}    
+.Content {
+    width: 1300px;
+    background-color: rgb(255, 255, 255);
+    min-width: fit-content;
+    margin: auto; /* centers the content horizontally */
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 10px;
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.13));
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 3px;
+    color: rgb(53, 94, 129);
+}
+.Content #head1 {
+    text-align: left;
+    font-size: 25px;
+}
+.Content .Topic1 {
+    max-width: 1200px;
+    width: 1300px;
+}
+.Content .Topic1 p{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+}
+.Content li {
+    text-align: left;
+    margin-bottom: 5px;
+}
+.Content .Topic2 p{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+}
+.Content .Topiccontent {
+    display: grid;
+    grid-template-columns: 600px 550px;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.Content .Topic2content {
+    display: grid;
+    grid-template-columns: 550px 600px;
+    gap: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.Content #head2 {
+    text-align: left;
+    font-size: 25px;
+}
+.Content .Topic2 {
+    max-width: 1200px;
+    width: 1300px;
+}
+.Content .Topic1 #img1 {
+    width: 600px;
+    height: 350px;
+    border-radius: 7px;
+}
+.Content .Topic2 #img2 {
+    width: 600px;
+    height: 350px;
+    border-radius: 7px;
+}
+.Content .Topic1 #img3 {
+    width: 600px;
+    height: 350px;
+    border-radius: 7px;
+}
+.Content .Topic2 #img4 {
+    width: 600px;
+    height: 350px;
+    border-radius: 7px;
+}
+.Content .Topic1 #img5 {
+    width: 600px;
+    height: 350px;
+    border-radius: 7px;
+}
+.Content .Topic2 #img6 {
+    width: 600px;
+    height: 350px;
+    border-radius: 7px;
+}
+.Content .Topic1 #img7 {
+    width: 600px;
+    height: 350px;
+    border-radius: 7px;
+}
+.Content .Topic2 #img8 {
+    width: 600px;
+    height: 350px;
+    border-radius: 7px;
+}
+.Content .Topic1 #img9 {
+    width: 600px;
+    height: 450px;
+    border-radius: 7px;
+}
+.midback {
+    background-color: rgb(18, 40, 68);
+    width: 100%;
+    height: 60px;
+}
+.Content #p1 {
+    margin-top: 20px;
+}
+.Content #p2 {
+    margin-top: 50px;
+}
+.Content #p3 {
+    margin-top: 40px;
+}
+.Content #p4 {
+    margin-top: 50px;
+}
+.Content #p5 {
+    margin-top: 40px;
+}
+.Content #p6 {
+    margin-top: 40px;
+}
+.Content #p7 {
+    margin-top: 50px;
+}
+.Content #p8 {
+    margin-top: 40px;
+}
+.Content #p9 {
+    margin-top: 60px;
+}
