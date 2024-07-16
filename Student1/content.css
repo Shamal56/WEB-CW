@@ -9,7 +9,7 @@ body {
 .MainImg {
     position: relative;
     background-color: white;
-    width: 1920px;
+    width: 100%;
     min-width: 1200px;
     height: 500px;
     min-height: auto;
@@ -50,7 +50,7 @@ h2 {
     letter-spacing: 3px;
     color: rgb(53, 94, 129);
 }
-.Content #head1 {
+.Content h3 {
     text-align: left;
     font-size: 25px;
 }
@@ -85,10 +85,6 @@ h2 {
     gap: 50px;
     margin-top: 30px;
     margin-bottom: 30px;
-}
-.Content #head2 {
-    text-align: left;
-    font-size: 25px;
 }
 .Content .Topic2 {
     max-width: 1200px;
